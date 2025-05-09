@@ -79,6 +79,7 @@ router.delete("/todos", async (req, res) => {
 app.use("/api", router);
 
 // Start
-app.listen(3001, () => {
-  console.log("✅ Backend läuft auf Port 3001");
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => {
+  console.log(`✅ Backend läuft auf Port ${PORT}`);
 });
